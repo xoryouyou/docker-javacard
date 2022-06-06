@@ -1,0 +1,32 @@
+version: "3.7"
+services:
+  javacard-gradle:
+    image: javacard-gradle
+    build:
+      context: .
+      dockerfile: docker/gradle.Dockerfile
+    container_name: javacard_gradle
+    user: "gradle:gradle"
+    volumes:
+      - ./examples/gradle/helloworld:/applet
+      - ./external:/javacard/
+  javacard-ant:
+    image: javacard-ant
+    build:
+      context: .
+      dockerfile: docker/ant.Dockerfile
+    container_name: javacard_ant
+    volumes:
+      - ./examples/ant/helloworld:/applet
+      - ./external:/javacard/
+  javacard-usb:
+    image: javacard-usb
+    build:
+      context: .
+      dockerfile: docker/usb.Dockerfile
+    container_name: javacard_usb
+    devices:
+      - "/dev/bus/usb:/dev/bus/usb"
+    volumes:
+      - ./examples/ant:/applet
+      - ./external:/javacard/
