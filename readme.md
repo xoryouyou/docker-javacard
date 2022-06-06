@@ -143,3 +143,4 @@ ISD: A000000151000000 (OP_READY)
 * Gradle Template https://github.com/crocs-muni/javacard-gradle-template-edu
 * jcardsim https://github.com/licel/jcardsim
 * Inspiration https://github.com/MrSuicideParrot/Make-JavaCards-Great-Again
+* HelloWorld Applet https://github.com/devrandom/javacard-helloworld
