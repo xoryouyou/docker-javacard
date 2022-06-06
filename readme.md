@@ -3,7 +3,7 @@
 Why you ask? Well I don't know either.
 
 But the main reasons are I needed it and:
-* I don't want to taint my host system with JCDKs from the late 90s
+* I don't want to taint my host system with JCDKs from the early 2000s
 * I don't want to fiddle around with a multitude of system environment variables to build a cap file
 * I don't want to maintain all this for Linux and Windows hosts
 * You get the idea... ;)
