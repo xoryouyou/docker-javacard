@@ -35,7 +35,7 @@ the appropriate image should automatically be build.
 ## ant
 
 Start container:
-* `docker compose run --rm -ti javacard-gradle`
+* `docker compose run --rm -ti javacard-ant`
 
 Run tests:
 * `ant test`
