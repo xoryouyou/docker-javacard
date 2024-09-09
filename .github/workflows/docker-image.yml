@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file docker/ant.Dockerfile --tag javacard-ant:$(date +%s)
     - name: Build the Docker image
-      run: docker build . --file docker/gradle.Dockerifle --tag javacard-gradle:$(date +%s)
+      run: docker build . --file docker/gradle.Dockerfile --tag javacard-gradle:$(date +%s)
