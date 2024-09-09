@@ -19,7 +19,7 @@ jobs:
     - name: Build and push ant image
       uses: docker/build-push-action@v6
       with:
-        file: {context}/docker/ant.Dockerfile
+        file: ./docker/ant.Dockerfile
         context: .
         push: true
         tags: xoryouyou/javacard-ant:latest
@@ -27,7 +27,7 @@ jobs:
     - name: Build and push gradle image
       uses: docker/build-push-action@v6
       with:
-        file: {context}/docker/gradle.Dockerfile
+        file: ./docker/gradle.Dockerfile
         context: .
         push: true
         tags: xoryouyou/javacard-gradle:latest
