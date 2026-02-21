@@ -18,11 +18,40 @@ running containers but is also capable to run in a typical CI/CD pipeline.
 
 Just map the applet into `/applet` and run your tests.
 
-
 # Overview
 
 ![docker container overview](.github/docker-overview.png)
 
+
+# `devcontainer` setup
+
+For the easiest developer experience, use [vscode dev containers](https://code.visualstudio.com/docs/devcontainers/containers). This allows you to develop JavaCard applets without worrying about Docker commands or environment setup.
+
+## Setup
+
+1. Install the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) in vscode
+2. Open the project folder (e.g., `examples/devcontainers/helloworld`) in vscode
+3. When prompted, click **"Reopen in Container"** or use `>Dev Containers: Reopen in Container`
+4. Wait for the container to build the docker image and deploy the vscode server
+5. run `ant`
+
+## Example Project
+
+An example project is provided at `examples/devcontainers/helloworld/`. Open this folder directly in vscode to try it out.
+
+```bash
+# Open the example project in VS Code
+code examples/devcontainers/helloworld
+```
+
+## Creating Your Own Project
+
+To create a new JavaCard project with Dev Container support:
+
+1. Copy the `examples/devcontainers/helloworld/` folder to a new location
+2. Rename and modify the source files as needed
+3. Update `build.xml` with your applet's AID and package name
+4. Open the folder in vscode and reopen in container
 
 
 # the `docker compose` way
@@ -101,7 +130,6 @@ For gradle:
 
 For example (keep in mind to map your volumes manually now)
 * `docker run --rm -ti $PWD/examples/ant/helloworld:/applet javacard`
-
 
 # USB image to install applets to physical card
 

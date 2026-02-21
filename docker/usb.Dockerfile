@@ -1,4 +1,5 @@
-FROM openjdk:8
+# https://github.com/docker-library/openjdk/issues/505 
+FROM eclipse-temurin:8
 # include jcardsim and needed libs
 ADD external /javacard
 # add all dependencies to run pcsc from the container

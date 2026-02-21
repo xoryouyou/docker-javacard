@@ -1,4 +1,5 @@
-FROM openjdk:8
+# https://github.com/docker-library/openjdk/issues/505 
+FROM eclipse-temurin:8
 # update and install ant
 RUN apt-get -y update && apt-get install -y ant
 # add non root user

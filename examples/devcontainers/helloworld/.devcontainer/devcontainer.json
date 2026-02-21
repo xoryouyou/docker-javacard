@@ -1,0 +1,30 @@
+{
+    "name": "JavaCard Development",
+    "build": {
+        "dockerfile": "../../../../docker/devcontainer.Dockerfile",
+        "context": "."
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "vscjava.vscode-java-pack",
+                "redhat.java",
+                "vscjava.vscode-java-debug"
+            ],
+            "settings": {
+                "java.configuration.updateBuildConfiguration": "automatic",
+                "java.project.sourcePaths": ["src"],
+                "java.project.outputPath": "build/main",
+                "java.project.referencedLibraries": [
+                    "/javacard/libs/**/*.jar",
+                    "/javacard/oracle_javacard_sdks/jc305u3_kit/lib/*.jar"
+                ],
+                "terminal.integrated.defaultProfile.linux": "bash"
+            }
+        }
+    },
+    "postCreateCommand": "ant -version && java -version",
+    "remoteUser": "ubuntu",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind,consistency=cached",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}"
+}
