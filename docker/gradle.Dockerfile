@@ -4,7 +4,5 @@ FROM eclipse-temurin:8
 ADD external /javacard
 # change default dir
 WORKDIR /applet
-# switch to 'gradle' user
-USER gradle
 # presetup gradle
-CMD bash
+CMD ["bash"]
