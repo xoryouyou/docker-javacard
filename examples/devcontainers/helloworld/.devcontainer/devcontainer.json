@@ -1,7 +1,7 @@
 {
     "name": "JavaCard Development",
     "build": {
-        "dockerfile": "../../../../docker/devcontainer.Dockerfile",
+        "dockerfile": "devcontainer.Dockerfile",
         "context": "."
     },
     "customizations": {
